@@ -4,7 +4,6 @@ package main
 
 //simple server for wasm
 import (
-	"fmt"
 	"net/http"
 )
 func main() {

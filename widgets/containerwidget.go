@@ -20,6 +20,6 @@ func NewContainerWidget(child Widget) ContainerWidget {
 
 //methods
 
-func (w ContainerWidget) Render(ctx WidgetContext) error {
+func (w ContainerWidget) Render(ctx WidgetContext) Widget {
 	return nil
 }

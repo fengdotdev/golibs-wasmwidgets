@@ -19,7 +19,7 @@ func (w MainAppWidget) Run() {
 	w.Loop()
 }
 
-func (w MainAppWidget) Render(ctx WidgetContext) error {
+func (w MainAppWidget) Render(ctx WidgetContext) Widget {
 
 	return w.child.Render(ctx)
 }

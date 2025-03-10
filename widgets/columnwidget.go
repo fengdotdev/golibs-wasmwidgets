@@ -18,6 +18,6 @@ func NewColumnWidget(children ...Widget) ColumnWidget {
 	return Column(children...)
 }
 
-func (w ColumnWidget) Render(ctx WidgetContext) error {
+func (w ColumnWidget) Render(ctx WidgetContext) Widget {
 	return nil
 }

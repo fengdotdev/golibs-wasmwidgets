@@ -19,6 +19,6 @@ func NewTextWidget(text string) TextWidget {
 
 //methods
 
-func (w TextWidget) Render(ctx WidgetContext) error {
+func (w TextWidget) Render(ctx WidgetContext) Widget {
 	return nil
 }
