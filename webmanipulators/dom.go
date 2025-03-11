@@ -23,7 +23,6 @@ func NewDOM() DOM {
 }
 
 func (w *DOM) AddEventListener(event Events, listener func()) {
-	w.references[listener] = listener
 	w.dom.Call("addEventListener", event, listener)
 }
 
