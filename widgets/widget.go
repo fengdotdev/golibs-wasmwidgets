@@ -3,8 +3,9 @@
 
 package widgets
 
-type WidgetContext struct {
-}
+
+
+
 
 type Widget interface {
 	Render(ctx WidgetContext) Widget
