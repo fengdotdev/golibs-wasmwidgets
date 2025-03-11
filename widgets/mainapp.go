@@ -4,22 +4,27 @@
 package widgets
 
 type MainAppWidget struct {
+	ctx   WidgetContext
 	child Widget
 }
 
 func MainApp(child Widget) MainAppWidget {
-	return MainAppWidget{child: child}
+	ctx := NewWidgetContext()
+	return MainAppWidget{
+		ctx:   *ctx,
+		child: child}
 }
 
 func NewMainAppWidget(child Widget) MainAppWidget {
 	return MainApp(child)
 }
 
-func (w MainAppWidget) Run() {
+func (w *MainAppWidget) Run() {
+	w.Render(w.ctx)
 	w.Loop()
 }
 
-func (w MainAppWidget) Render(ctx WidgetContext) Widget {
+func (w *MainAppWidget) Render(ctx WidgetContext) Widget {
 
 	return w.child.Render(ctx)
 }
