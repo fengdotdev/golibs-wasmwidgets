@@ -10,13 +10,11 @@ import (
 
 type DomInterface = interfaces.DomInterface
 
-type WidgetContext struct {
-	webDom DomInterface
-}
 
-func NewWidgetContext() *WidgetContext {
+
+func NewWidgetContext() *BuildContext {
 	dom := dom.NewDOM()
-	return &WidgetContext{
+	return &BuildContext{
 		webDom: &dom,
 	}
 }

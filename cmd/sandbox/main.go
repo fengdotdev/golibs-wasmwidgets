@@ -8,10 +8,10 @@ import (
 	"github.com/fengdotdev/golibs-wasmwidgets/widgets"
 )
 
-type context = widgets.WidgetContext
+type context = widgets.BuildContext
 
 func main() {
-	app:= widgets.MainApp(
+	app := widgets.MainApp(
 
 		widgets.Text("Hello, World!"),
 	)

@@ -1,7 +1,6 @@
 //go:build js && wasm
 // +build js,wasm
 
-
 package widgets
 
 var _ Widget = &ContainerWidget{}
@@ -20,6 +19,6 @@ func NewContainerWidget(child Widget) ContainerWidget {
 
 //methods
 
-func (w ContainerWidget) Render(ctx WidgetContext) Widget {
+func (w ContainerWidget) Build(buildContext BuildContext) Widget {
 	return nil
 }

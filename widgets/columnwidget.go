@@ -1,7 +1,6 @@
 //go:build js && wasm
 // +build js,wasm
 
-
 package widgets
 
 var _ Widget = &ColumnWidget{}
@@ -18,6 +17,6 @@ func NewColumnWidget(children ...Widget) ColumnWidget {
 	return Column(children...)
 }
 
-func (w ColumnWidget) Render(ctx WidgetContext) Widget {
+func (w ColumnWidget) Build(buildContext BuildContext) Widget {
 	return nil
 }

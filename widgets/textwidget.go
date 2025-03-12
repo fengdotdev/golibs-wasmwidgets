@@ -3,8 +3,6 @@
 
 package widgets
 
-import "github.com/fengdotdev/golibs-wasmwidgets/web/element"
-
 var _ Widget = &TextWidget{}
 
 type TextWidget struct {
@@ -21,9 +19,8 @@ func NewTextWidget(text string) TextWidget {
 
 //methods
 
-func (w TextWidget) Render(ctx WidgetContext) Widget {
+func (w TextWidget) Build(buildContext BuildContext) Widget {
 
-	e := element.NewElement("p", ctx.webDom)
-	e.SetTextContent(w.Text)
+	panic("implement me")
 	return w
 }

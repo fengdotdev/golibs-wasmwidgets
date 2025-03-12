@@ -4,15 +4,15 @@
 package widgets
 
 type MainAppWidget struct {
-	ctx   WidgetContext
-	child Widget
+	buildContext BuildContext
+	child        Widget
 }
 
 func MainApp(child Widget) MainAppWidget {
 	ctx := NewWidgetContext()
 	return MainAppWidget{
-		ctx:   *ctx,
-		child: child}
+		buildContext: *ctx,
+		child:        child}
 }
 
 func NewMainAppWidget(child Widget) MainAppWidget {
@@ -20,13 +20,13 @@ func NewMainAppWidget(child Widget) MainAppWidget {
 }
 
 func (w *MainAppWidget) Run() {
-	w.Render(w.ctx)
+	w.Build(w.buildContext)
 	w.Loop()
 }
 
-func (w *MainAppWidget) Render(ctx WidgetContext) Widget {
+func (w *MainAppWidget) Build(buildContext BuildContext) Widget {
 
-	return w.child.Render(ctx)
+	return w.child.Build(buildContext)
 }
 
 func (w *MainAppWidget) Loop() {

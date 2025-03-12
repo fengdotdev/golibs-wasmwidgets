@@ -18,6 +18,6 @@ func NewButtonWidget(content Widget, onclick func()) ButtonWidget {
 	return Button(content, onclick)
 }
 
-func (w ButtonWidget) Render(ctx WidgetContext) Widget {
+func (w ButtonWidget) Build(buildContext BuildContext) Widget {
 	return nil
 }

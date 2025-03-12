@@ -3,10 +3,7 @@
 
 package widgets
 
-
-
-
-
 type Widget interface {
-	Render(ctx WidgetContext) Widget
+	Build(buildContext BuildContext) Widget
+	CreateElement() Element
 }
