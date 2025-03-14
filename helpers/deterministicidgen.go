@@ -1,7 +1,10 @@
 package helpers
 
+import "./golibs-helperfuncs/unique"
+
+
 func DeterministicIDGen(seed string) string {
-	panic("Not implemented")
+	id := unique.DeterministicUUID(seed)
 	return ""
 }
 
